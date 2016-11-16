@@ -3,6 +3,7 @@ var path = require('path');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
+  devtool: 'eval-source-map',
   devServer: {
     historyApiFallback: true,
     hot: true,

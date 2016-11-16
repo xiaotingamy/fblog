@@ -28,7 +28,7 @@ exports.default = _react2.default.createClass({
         e.preventDefault();
         var username = this.state.username.trim();
         var password = this.state.password.trim();
-        var reg = /[a-zA-Z0-9]{6,}/;
+        var reg = /[a-zA-Z0-9]{3,}/;
         if (username == '') {
             $.toast('用户名不能为空');
             return false;
