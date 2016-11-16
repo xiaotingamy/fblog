@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import LoginBox from './components/LoginBox';
 
 ReactDOM.render(
-  <App />,
-  document.body.appendChild(document.createElement('div'))
+    <LoginBox url='/token' />,
+    document.getElementById('content')
 );
