@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 import LoginBox from './components/LoginBox';
 
 ReactDOM.render(
-    <LoginBox url='/token' />,
+    <LoginBox url='/user/login' />,
     document.getElementById('content')
 );

@@ -14,17 +14,21 @@
   },
   "dependencies": {
     "babel-runtime": "6.x",
+    "body-parser": "^1.15.2",
     "compression": "^1.6.2",
     "ejs": "^2.5.2",
     "express": "^4.14.0",
     "express-controller": "^0.2.9",
     "http": "0.0.0",
-    "request": "^2.78.0",
     "if-env": "^1.0.0",
+    "inherits": "^2.0.3",
+    "mime-db": "^1.24.0",
     "mysql": "^2.11.1",
     "react": "15.x",
     "react-dom": "15.x",
-    "react-router": "^2.0.0"
+    "react-router": "^2.0.0",
+    "request": "^2.78.0",
+    "setprototypeof": "^1.0.1"
   },
   "devDependencies": {
     "babel-core": "6.x",
