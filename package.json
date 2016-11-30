@@ -24,7 +24,9 @@
     "mysql": "^2.11.1",
     "react": "15.x",
     "react-dom": "15.x",
+    "react-redux": "^4.4.6",
     "react-router": "^2.0.0",
+    "redux": "^3.6.0",
     "request": "^2.78.0",
     "setprototypeof": "^1.0.1"
   },
