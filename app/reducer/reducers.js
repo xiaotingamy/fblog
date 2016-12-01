@@ -1,4 +1,4 @@
-import { ADD_TODO, TOGGLE_TODO, SET_VISIBILITY_FILTER, VisibilityFilters } from '../actions/actions';
+import { ADD_TODO, COMPLETE_TODO, SET_VISIBILITY_FILTER, VisibilityFilters } from '../actions/actions';
 import { combineReducers } from 'redux';
 const { SHOW_ALL } = VisibilityFilters;
 
@@ -49,15 +49,23 @@ function todos(state = [], action) {
 					completed: false
 				}
 			]
-		case TOGGLE_TODO:
-			return state.map((todo,index) => {
-				if (index == action.index) {
-					return Object.assign({}, todo, {
-						completed: !todo.completed
-					})
-				}
-				return todo
-			})
+		// case TOGGLE_TODO:
+		// 	return state.map((todo,index) => {
+		// 		if (index == action.index) {
+		// 			return Object.assign({}, todo, {
+		// 				completed: !todo.completed
+		// 			})
+		// 		}
+		// 		return todo
+		// 	})
+		case COMPLETE_TODO:
+			return [
+				...state.slice(0, action.index),
+				Object.assign({}, state[action.index], {
+					completed: true
+				}),
+				...state.slice(action.index + 1)
+			]
 		default:
 			return state
 	}
@@ -89,9 +97,9 @@ export default todoApp;
 
 // 注意上面的写法和下面完全等价：
 
-export default function todoApp(state= {}, action) {
-	return {
-		visibilityFilter: visibilityFilter(state.visibilityFilter, action),
-		todos: todos(state.todos, action)
-	}
-}
+// export default function todoApp(state= {}, action) {
+// 	return {
+// 		visibilityFilter: visibilityFilter(state.visibilityFilter, action),
+// 		todos: todos(state.todos, action)
+// 	}
+// }

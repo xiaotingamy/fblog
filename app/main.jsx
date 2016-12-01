@@ -1,11 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-
-import { createStore } form 'redux';
-import todoApp from './reducers/reducers'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './components/App'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import todoApp from './reducer/reducers'
 
 let store = createStore(todoApp)
 
